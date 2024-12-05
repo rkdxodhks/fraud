@@ -1,0 +1,190 @@
+<!DOCTYPE html>
+<html lang="ko">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="fraud_ver2.css" />
+  </head>
+  <body>
+    <div class="main-start">부산대학교통학증</div>
+
+    <section class="header-section">
+      <!-- 최상단 로고 -->
+      <div class="logo">
+        <img
+          src="https://www.pusan.ac.kr/_contents/kor/_Img/Layout/logo_w.png"
+          alt="부산대학교 로고"
+        />
+      </div>
+
+      <!-- 네비게이션 바 -->
+      <div class="nav-bar">
+        <nav class="nav">
+          <ul>
+            <li><a href="https://m.pusan.ac.kr/">홈</a></li>
+            <li><a href="https://m.pusan.ac.kr/ko/mypnu">MyPNU</a></li>
+            <li><a href="https://m.pusan.ac.kr/ko/notice">학교공지</a></li>
+            <li>
+              <a href="https://onestop.pusan.ac.kr/login">학생지원시스템</a>
+            </li>
+            <li><a href="https://m.pusan.ac.kr/ko/map">캠퍼스맵</a></li>
+          </ul>
+        </nav>
+      </div>
+
+      <!-- 중앙 타이틀 -->
+      <div class="header-title">
+        <h1 class="main-start">부산대학교통학증</h1>
+      </div>
+    </section>
+    <section class="input-section">
+      <div class="input-container">
+        <!-- 프로필 사진 선택 -->
+        <div class="profile-photo">
+          <label for="photo-input">
+            <img
+              src="placeholder.jpg"
+              alt="프로필 사진 선택"
+              id="photo-preview"
+            />
+          </label>
+          <input type="file" id="photo-input" accept="image/*" />
+        </div>
+
+        <!-- 사용자 정보 입력 -->
+        <form id="user-info-form" class="user-info-form">
+          <div class="form-group">
+            <label for="name">이름</label>
+            <input type="text" id="name" placeholder="이름을 입력하세요" />
+          </div>
+          <div class="form-group">
+            <label for="student-id">학번</label>
+            <input
+              type="number"
+              id="student-id"
+              placeholder="학번을 입력하세요"
+            />
+          </div>
+          <div class="form-group">
+            <label for="department">학과</label>
+            <input
+              type="text"
+              id="department"
+              placeholder="학과를 입력하세요"
+            />
+          </div>
+          <div class="form-group">
+            <label for="semester">학기</label>
+            <input type="text" id="semester" placeholder="학기를 입력하세요" />
+          </div>
+
+          <!-- 제출 버튼 -->
+          <button type="submit" class="submit-button">확인</button>
+        </form>
+      </div>
+
+      <!-- 출력 영역 -->
+      <div id="output-section" class="output-section" style="display: none">
+        <div class="profile-label">
+          <div class="profile-image">
+            <img id="output-photo" src="placeholder.jpg" alt="프로필 사진" />
+          </div>
+          <div class="profile-info">
+            <div class="name-semester-wrapper">
+              <span id="output-name" class="name"></span>
+              <span id="output-semester" class="semester"></span>
+            </div>
+            <div class="info-tags">
+              <span id="output-student-id" class="tag"></span>
+              <span id="output-department" class="tag"></span>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="bus-pass-info">
+      <div class="bus-pass-info-left">
+        <p class="user-number">탑승번호</p>
+        <strong class="bus-number" id="bus-number"></strong>
+      </div>
+      <div class="bus-pass-info-right">
+        <p><span id="current-date" class="time"></span></p>
+        <p>탑승가능</p>
+        <p>15:10 밀양 -> 부산대전철역</p>
+      </div>
+    </section>
+
+    <section class="bus-schedule">
+      <div class="container">
+        <h1>통학버스 승.하차 지점 및 시간표</h1>
+        <button class="time-change-btn">탑승시간변경</button>
+
+        <table>
+          <thead>
+            <tr class="color-main">
+              <th rowspan="2">탑승일자</th>
+              <th colspan="2">부산</th>
+              <th colspan="2">밀양</th>
+            </tr>
+            <tr class="color-text">
+              <th>승차장소</th>
+              <th>시간</th>
+              <th>승차장소</th>
+              <th>시간</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td>12.02(월)</td>
+              <td>부산대전<br />철역</td>
+              <td>08:40</td>
+              <td>밀양캠퍼스<br />학생회관</td>
+              <td>15:10</td>
+            </tr>
+            <tr>
+              <td>12.04(수)</td>
+              <td>부산대전<br />철역</td>
+              <td>08:40</td>
+              <td>밀양캠퍼스<br />학생회관</td>
+              <td>15:10</td>
+            </tr>
+            <tr>
+              <td>12.09(월)</td>
+              <td>부산대전<br />철역</td>
+              <td>08:40</td>
+              <td>밀양캠퍼스<br />학생회관</td>
+              <td>15:10</td>
+            </tr>
+            <tr>
+              <td>12.11(수)</td>
+              <td>부산대전<br />철역</td>
+              <td>08:40</td>
+              <td>밀양캠퍼스<br />학생회관</td>
+              <td>15:10</td>
+            </tr>
+            <tr>
+              <td>12.16(월)</td>
+              <td>부산대전<br />철역</td>
+              <td>08:40</td>
+              <td>밀양캠퍼스<br />학생회관</td>
+              <td>15:10</td>
+            </tr>
+            <tr>
+              <td>12.18(수)</td>
+              <td>부산대전<br />철역</td>
+              <td>08:40</td>
+              <td>밀양캠퍼스<br />학생회관</td>
+              <td>15:10</td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+    </section>
+
+    <footer>
+      <p>부산대학교 &copy; 2024</p>
+    </footer>
+    <script src="fraud_ver2.js"></script>
+  </body>
+</html>
